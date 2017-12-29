@@ -1,0 +1,20 @@
+{
+	"name": "beefly-frame",
+	"version": "3.0.0",
+	"description": "beefly-frame",
+	"main": "''",
+	"scripts": {
+		"start": "browser-sync start --server ./public --files '**/*.*'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/beeflying/beefly-frame"
+	},
+	"author": "kecoyo",
+	"license": "MIT",
+	"homepage": "https://github.com/beeflying/beefly-frame#readme",
+	"dependencies": {
+	},
+	"devDependencies": {
+	}
+}
