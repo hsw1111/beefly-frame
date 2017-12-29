@@ -1,0 +1,115 @@
+/******************/
+.tabs {
+
+}
+
+.tab-header {
+    width: 100%;
+    height: 48px;
+    background-color: #ecf0f5;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.tab-left {
+    float: left;
+    height: 100%;
+    display: none;
+}
+
+.tab-right {
+    float: right;
+    height: 100%;
+    display: none;
+}
+
+.tab-menu {
+    float: right;
+    height: 100%;
+}
+
+.tab-left i, .tab-right i, .tab-menu i {
+    line-height: 48px;
+    font-size: 20px;
+}
+
+.tab-ul {
+    padding: 0;
+    font-size: 0;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    white-space: nowrap;
+    position: relative;
+    margin: 0;
+    margin-right: 26px;
+}
+
+.tab-ul li {
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.tab-ul li a {
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    color: #444;
+    padding: 0 22px;
+    transition: background-color .35s cubic-bezier(.35, 0, .25, 1);
+    border-bottom: none;
+    position: relative;
+}
+
+.tab-ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    width: 0;
+    border-bottom: 3px solid #605ca8;
+    transition: all linear .2s;
+}
+
+.tab-ul .active a:after {
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    opacity: 1;
+    transition: all linear .2s;
+}
+
+.tab-ul li .fa-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-3px, 17px);
+    cursor: pointer;
+    display: none;
+}
+
+.tab-ul .active .fa-close {
+    display: block;
+}
+
+.scroll .tab-left, .scroll .tab-right {
+    display: block;
+}
+
+.scroll .tab-ul {
+    margin-left: 26px;
+    margin-right: 50px;
+}
+
+/****************************************/
+
+.fixed .tab-header {
+    position: fixed;
+}
+
+.fixed .tab-content {
+    padding-top: 48px;
+}

@@ -1,0 +1,228 @@
+[
+	{
+		"name": "用户管理",
+		"icon": "fa-user",
+		"child": [
+			{
+				"name": "用户管理",
+				"path": "/user"
+			},
+			{
+				"name": "用户信息",
+				"path": "/user/info"
+			},
+			{
+				"name": "短信管理",
+				"path": "/user/sms"
+			},
+			{
+				"name": "验证码信息",
+				"path": "/user/verification"
+			},
+			{
+				"name": "问题用户管理",
+				"path": "/user/problem"
+			}
+		]
+	},
+	{
+		"name": "订单管理",
+		"icon": "fa-reorder",
+		"child": [
+			{
+				"name": "订单管理",
+				"path": "/order"
+			},
+			{
+				"name": "订单信息",
+				"path": "/order/info"
+			}
+		]
+	},
+	{
+		"name": "押金管理",
+		"icon": "fa-money",
+		"child": [
+			{
+				"name": "押金管理",
+				"path": "/cashPledge"
+			},
+			{
+				"name": "提现管理",
+				"path": "/cashPledge/withdrawal"
+			}
+		]
+	},
+	{
+		"name": "余额管理",
+		"icon": "fa-rmb",
+		"child": [
+			{
+				"name": "余额提现",
+				"path": "/balance"
+			},
+			{
+				"name": "提现管理",
+				"path": "/balance/withdraw"
+			}
+		]
+	},
+	{
+		"name": "车辆管理",
+		"icon": "fa-bicycle",
+		"child": [
+			{
+				"name": "车辆管理",
+				"path": "/bike"
+			},
+			{
+				"name": "车辆信息",
+				"path": "/bike/info"
+			},
+			{
+				"name": "车辆日志",
+				"path": "/bike/log"
+			},
+			{
+				"name": "车辆监控系统",
+				"path": "/bike/monitor"
+			},
+			{
+				"name": "风控监控系统",
+				"path": "/bike/windMornitor"
+			}
+		]
+	},
+	{
+		"name": "电池管理",
+		"icon": "fa-battery-three-quarters",
+		"child": [
+			{
+				"name": "电池管理",
+				"path": "/battery"
+			},
+			{
+				"name": "电池日志",
+				"path": "/battery/log"
+			},
+			{
+				"name": "电池监控系统",
+				"path": "/battery/monitor"
+			}
+		]
+	},
+	{
+		"name": "反馈管理",
+		"icon": "fa-question",
+		"child": [
+			{
+				"name": "无法开锁上报管理",
+				"path": "/feedback/unlock"
+			},
+			{
+				"name": "车辆故障上报管理",
+				"path": "/feedback/bikeFault"
+			},
+			{
+				"name": "违停上报管理",
+				"path": "/feedback/illegalPark"
+			},
+			{
+				"name": "找不到车上报管理",
+				"path": "/feedback/notFoundBike"
+			},
+			{
+				"name": "闭锁未结费上报管理",
+				"path": "/feedback/shuttingOrder"
+			},
+			{
+				"name": "无法启动上报管理",
+				"path": "/feedback/startBike"
+			},
+			{
+				"name": "失踪车辆上报",
+				"path": "/feedback/disappearBike"
+			},
+			{
+				"name": "意见反馈",
+				"path": "/feedback/userSuggestions"
+			},
+			{
+				"name": "车辆故障记录",
+				"path": "/feedback/vehicleFaultList"
+			}
+		]
+	},
+	{
+		"name": "报警管理",
+		"icon": "fa-warning",
+		"child": [
+			{
+				"name": "24小时未有订单报警",
+				"path": "/alarm/noOrder"
+			},
+			{
+				"name": "出境报警",
+				"path": "/alarm/outLimit"
+			},
+			{
+				"name": "侧翻报警",
+				"path": "/alarm/rollover"
+			},
+			{
+				"name": "电池丢失报警",
+				"path": "/alarm/butteryLost"
+			},
+			{
+				"name": "电机故障报警",
+				"path": "/alarm/motorFailure"
+			},
+			{
+				"name": "车辆平移报警",
+				"path": "/alarm/bikeTranslate"
+			},
+			{
+				"name": "GPS长时间未更新",
+				"path": "/alarm/noUpdateGps"
+			},
+			{
+				"name": "盒子掉线",
+				"path": "/alarm/boxOffline"
+			},
+			{
+				"name": "欠压",
+				"path": "/alarm/lowVoltage"
+			},
+			{
+				"name": "车辆订单异常报警",
+				"path": "/alarm/orderAbnormal"
+			},
+			{
+				"name": "无换电车辆报警",
+				"path": "/alarm/noChangeElectric"
+			}
+		]
+	},
+	{
+		"name": "市场活动",
+		"icon": "fa-trophy",
+		"child": [
+			{
+				"name": "广告管理",
+				"path": "/activity/advertisement"
+			},
+			{
+				"name": "活动配置",
+				"path": "/activity/configure"
+			},
+			{
+				"name": "图标管理",
+				"path": "/activity/icon"
+			},
+			{
+				"name": "出行券管理",
+				"path": "/activity/travelCoupon"
+			}
+		]
+	}
+]
