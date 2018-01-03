@@ -456,7 +456,7 @@ if (typeof jQuery === 'undefined') {
 			str += `	</a>`;
 			str += `	<ul class="treeview-menu">`;
 			for (var child of menu.child) {
-				str += `		<li><a href="module/index.html#${child.path}" target="_blank"><i class="fa fa-circle-o"></i> ${child.name} </a></li>`;
+				str += `		<li><a href="${child.path}" target="_blank"><i class="fa fa-circle-o"></i> ${child.name} </a></li>`;
 			}
 			str += `	</ul>`;
 			str += `</li>`;
@@ -643,24 +643,35 @@ if (typeof jQuery === 'undefined') {
 
 	// 添加标签页
 	Tabs.prototype.addTab = function (tab) {
+		// 带参数
+		var queryString = '';
+		if (tab.params) {
+			var params = tab.params;
+			var paramsArray = [];
+			for (var key in params) {
+				paramsArray.push(key + '=' + encodeURIComponent(params[key]));
+			}
+			if (paramsArray.length > 0)
+				queryString = '?' + paramsArray.join('&');
+		}
+		var url = `module/index.html${queryString}#${tab.path}`;
 
-		var li = this.tabUl.find(`li[data-path="${tab.path}"]`);
+		var li = this.tabUl.find(`li[data-path="${url}"]`);
 		if (li.length == 0) {
 			this.tabUl.children().removeClass(ClassName.active);
 			this.tabContent.children().removeClass(ClassName.active);
 
-			this.tabUl.append(`<li class="active" data-path="${tab.path}">
+
+			this.tabUl.append(`<li class="active" data-path="${url}">
 				<a href="javascript:">
 					${tab.name}
 					<i class="fa fa-fw fa-close"></i>
 				</a>
 			</li>`)
 
-
 			var frameHeight = $('.content-wrapper').height() - 55;
-
 			this.tabContent.append(`<div class="tab-pane active">
-				<iframe src="${tab.path}" width="100%" height="${frameHeight}" frameborder="0"></1iframe>
+				<iframe src="${url}" width="100%" height="${frameHeight}" frameborder="0"></iframe>
 			</div>`);
 		} else {
 			this.tabUl.children().removeClass(ClassName.active);
@@ -864,7 +875,7 @@ if (typeof jQuery === 'undefined') {
 			that.initScrollState();
 		});
 
-		that.resizeFrameHeight()
+		that.resizeFrameHeight();
 	};
 
 	// Plugin Definition
@@ -901,6 +912,11 @@ if (typeof jQuery === 'undefined') {
 		$(Selector.data).each(function () {
 			Plugin.call($(this));
 		});
+		//
+		beefly.addTab = function (tab) {
+			var tabs = $('#tabs').tabs();
+			tabs.addTab(tab)
+		}
 	});
 
 }(jQuery);

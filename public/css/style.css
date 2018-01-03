@@ -70,7 +70,7 @@
     left: 50%;
     right: 50%;
     width: 0;
-    border-bottom: 3px solid #605ca8;
+    border-bottom: 3px solid #3c8dbc;
     transition: all linear .2s;
 }
 
@@ -112,4 +112,31 @@
 
 .fixed .tab-content {
     padding-top: 48px;
+}
+
+
+/****************************************/
+
+.skin-blue .tab-ul li a:after {
+    border-bottom-color: #3c8dbc;
+}
+
+.skin-black .tab-ul li a:after {
+    border-bottom-color: #ffffff;
+}
+
+.skin-red .tab-ul li a:after {
+    border-bottom-color: #dd4b39;
+}
+
+.skin-yellow .tab-ul li a:after {
+    border-bottom-color: #f39c12;
+}
+
+.skin-purple .tab-ul li a:after {
+    border-bottom-color: #605ca8;
+}
+
+.skin-green .tab-ul li a:after {
+    border-bottom-color: #00a65a;
 }
