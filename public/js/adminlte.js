@@ -912,11 +912,18 @@ if (typeof jQuery === 'undefined') {
 		$(Selector.data).each(function () {
 			Plugin.call($(this));
 		});
-		//
+
+		// 添加Tab页
 		beefly.addTab = function (tab) {
 			var tabs = $('#tabs').tabs();
 			tabs.addTab(tab)
-		}
+		};
+
+		// 关闭当前活动Tab页
+		beefly.closeTab = function () {
+			var tabs = $('#tabs').tabs();
+			tabs.closeTab()
+		};
 	});
 
 }(jQuery);
