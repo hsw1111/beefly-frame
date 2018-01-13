@@ -927,3 +927,10 @@ if (typeof jQuery === 'undefined') {
 	});
 
 }(jQuery);
+
+
+
+var loginUser = Jeselvmo.localStore.get('loginUser');
+if(loginUser){
+	$('*[name=username]').text(loginUser.name)
+}
