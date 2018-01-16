@@ -8,7 +8,6 @@ if (typeof jQuery === 'undefined') {
 }
 
 var apiPath = "http://47.93.48.250:7080/";
-
 var localStore = Jeselvmo.localStore;
 
 
